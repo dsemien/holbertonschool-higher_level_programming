@@ -9,8 +9,10 @@ int recusion_drome(listint_t **head, listint_t *copyofhead)
 	if (copyofhead == NULL)
 		return (1);
 	if (recusion_drome(head, copyofhead->next) == 1 && (*head)->n == copyofhead->n)
-		*head = (*head)->next;
-		return (1);
+		{
+			*head = (*head)->next;
+			return (1);
+		}
 	return (0);
 }
 
