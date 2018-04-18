@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    empty = ""
+    empty = " "
     length = len(sentence)
-    if sentence == empty:
+    if sentence is empty:
         return(None)
     else:
         return(length, sentence[0]) 
