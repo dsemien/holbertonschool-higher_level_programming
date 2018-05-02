@@ -12,12 +12,9 @@ class Square:
         """ Initialization of square
         Arguments:
             size (int): size of square
+            position (tuple): position of square
         """
-        if isinstance(size, int) is not True:  # check if var is int
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        self.size = size
+        self.__size = size
         self.position = position
 
     def area(self):
