@@ -26,7 +26,7 @@ class Square:
         """
         return(self.__size ** 2)
 
-    @property # getter
+    @property  # getter
     def size(self):
         """ Initialization of get private attribute
         Return:
@@ -34,7 +34,7 @@ class Square:
         """
         return(self.__size)
 
-    @size.setter # setter
+    @size.setter  # setter
     def size(self, resize):
         """ Initialization of set __size attribute
         Arguments:
