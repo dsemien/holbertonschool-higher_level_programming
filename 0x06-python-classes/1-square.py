@@ -11,6 +11,6 @@ class Square:
     def __init__(self, size):
         """ Initialization of square
         Arguments:
-            size (str): size of square
+            size (int): size of square
         """
         self.__size = size
