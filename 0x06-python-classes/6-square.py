@@ -76,8 +76,8 @@ class Square:
         vert, horzon = pos
         if vert < 0 or horzon < 0 or len(pos) is not 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if isinstance(vert, int) is not True:  # check if var is int
-            raise TypeError("position must be a tuple of 2 positive integers")
         if isinstance(horzon, int) is not True:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if isinstance(vert, int) is not True:  # check if var is int
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = pos
