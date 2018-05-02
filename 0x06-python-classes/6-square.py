@@ -24,6 +24,19 @@ class Square:
         """
         return(self.__size ** 2)
 
+    def my_print(self):
+        """ prints square to console using #
+        """
+        if self.size is 0:
+            print()
+        else:
+            vert, horzon = self.position
+            for sqace in range(horzon):
+                print()
+            for sqr in range(self.size):
+                print(" " * vert, end="")
+                print("#" * self.size)
+
     @property  # getter
     def size(self):
         """ Initialization of get private attribute
@@ -44,20 +57,6 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = pos
 
-    def my_print(self):
-        """ prints square to console using #
-        """
-        if self.size is 0:
-            print()
-        else:
-            vert, horzon = self.position
-            for sqace in range(horzon):
-                print()
-            for sqr in range(self.size):    
-                print(" " * vert, end="")
-                print("#" * self.size)
-
-
     @property  # getter
     def position(self):
         """ Initialization of get private attribute
@@ -75,9 +74,10 @@ class Square:
         vert, horzon = pos
         if isinstance(pos, tuple) is not True:  # check if var is tuple
             raise TypeError("position must be a tuple of 2 positive integers")
-        if isinstance(vert, int) is not True or isinstance(horzon, int) is not True:  # check if var is int
+        if isinstance(vert, int) is not True:  # check if var is int
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if isinstance(horzon, int) is not True:
             raise TypeError("position must be a tuple of 2 positive integers")
         if vert < 0 or horzon < 0 or len(pos) is not 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = pos
+        self.__position = pos
