@@ -71,7 +71,9 @@ class Square:
         Arguments:
             pos (int): position of square
         """
-        if isinstance(pos, tuple) is not True or len(pos) is not 2:  # check if var is tuple
+        if isinstance(pos, tuple) is not True:  # check if var is tuple
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if len(pos) is not 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         vert, horzon = pos
         if vert < 0 or horzon < 0:
