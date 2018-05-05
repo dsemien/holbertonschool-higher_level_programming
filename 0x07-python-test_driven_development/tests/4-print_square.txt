@@ -1,0 +1,86 @@
+The ``4-print_square`` module
+======================
+
+Using ``print_square``
+-------------------
+
+First import ``print_square`` from the ``4-print_square`` module:
+
+    >>> print_square = __import__("4-print_square").print_square
+
+Now use it:
+
+    Pass an int (size):
+    >>> print_square(5)
+    #####
+    #####
+    #####
+    #####
+    #####
+
+    Pass large int:
+    >>> print_square(12)
+    ############
+    ############
+    ############
+    ############
+    ############
+    ############
+    ############
+    ############
+    ############
+    ############
+    ############
+    ############
+
+    Pass a float:
+    >>> print_square(3.14)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    Pass a string:
+    >>> print_square("#")
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    Pass a list:
+    >>> print_square(list())
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    Pass a neagative:
+    >>> print_square(-3)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+    >>> print_square('x')
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square(None)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square([])
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square([[]])
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square([[6], [6], [6]])
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square((1,))
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square({})
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square({'a':1})
+    Traceback (most recent call last):
+    TypeError: size must be an integer
