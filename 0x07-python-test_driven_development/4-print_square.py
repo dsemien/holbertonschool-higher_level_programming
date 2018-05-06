@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """A progaram that prints a square with the character #.
 """
+
+
 def print_square(size):
     """ prints square to console using #
-        
+
         Arguments:
             size (int): Size of square
 
