@@ -28,6 +28,7 @@ class TestMaxInteger(unittest.TestCase):
         """
         with self.assertRaises(TypeError):
             max_integer([11, "hi", -30, "Holberton", {}])
+            max_integer({'cat': 'meow', 'dog': 'bark' })
 
 if __name__ == '__main__':
     unittest.main()
