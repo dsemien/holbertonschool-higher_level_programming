@@ -10,7 +10,7 @@ def add_integer(a, b=98):
         a (int): 1st interger
         b (int) (default 98): 2nd interger
 
-    Returns: 
+    Returns:
         int: sum of a + b
 
     Raises:
