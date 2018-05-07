@@ -3,6 +3,6 @@
 """
 
 
-class Rectangle(object):
+class Rectangle:
     """ A class that defines a Rectangle.
     """
