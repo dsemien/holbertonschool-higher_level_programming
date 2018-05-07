@@ -48,7 +48,7 @@ class Rectangle:
     def height(self, value):
         """ A function that sets the value of height for Rectangle.
         Arguments:
-            value (int): heights set value.
+            value (int): heights set value
         """
         if isinstance(value, int) is not True:
             raise TypeError("height must be an integer")
