@@ -90,4 +90,4 @@ class Rectangle:
     def __del__(self):
         """a destructor of rectangle.
         """
-        print("Bye rectangle…")
+        print("Bye rectangle...")
