@@ -11,7 +11,7 @@ class Rectangle:
         """ Initialiation of a Rectangle object.
         Arguments:
             width (int): Width of Rectangle.
-            height (int): Height of Rectangle.            
+            height (int): Height of Rectangle.
         """
         self.width = width
         self.height = height
