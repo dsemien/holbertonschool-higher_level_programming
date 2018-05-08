@@ -81,11 +81,12 @@ class Rectangle:
     def __str__(self):
         """ Prints a string representation of Rectangle.
         """
+        tmp = self.print_symbol
+        tmp2 = self.width
         if self.width is 0 or self.height is 0:
             return("")
         else:
-            return("\n".join((str(self.print_symbol) * self.width)
-                            for e in range(self.height)))
+            return("\n".join((str(tmp) * tmp2)for e in range(self.height)))
 
     def __repr__(self):
         """compute the “official” string representation of an object.
