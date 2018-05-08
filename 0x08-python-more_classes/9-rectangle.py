@@ -130,4 +130,4 @@ class Rectangle:
             size of rectangle instance.
          """
         cls.number_of_instances += 1
-        return(cls(size, size))    
+        return(cls(size, size))
