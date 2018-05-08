@@ -11,7 +11,7 @@ class Rectangle:
         """ Initialiation of a Rectangle object.
         Arguments:
             width (int): Width of Rectangle.
-            height (int): Height of Rectangle.            
+            height (int): Height of Rectangle.
         """
         self.width = width
         self.height = height
@@ -71,11 +71,11 @@ class Rectangle:
         if self.width is 0 or self.height is 0:
             return(0)
         return((self.width + self.height) * 2)
-    
+
     def __str__(self):
         """ Prints a string representation of Rectangle.
         """
         if self.width is 0 or self.height is 0:
             return("")
         else:
-            return("\n".join(("#" * self.width)for element in range(self.height)))
+            return("\n".join(("#" * self.width) for e in range(self.height)))
