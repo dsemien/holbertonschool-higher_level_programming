@@ -99,4 +99,4 @@ class Rectangle:
         """a destructor of rectangle.
         """
         Rectangle.number_of_instances -= 1
-        print("Bye rectangle…")
+        print("Bye rectangle...")
