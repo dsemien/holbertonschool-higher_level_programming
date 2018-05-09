@@ -16,9 +16,11 @@ class TestMaxInteger(unittest.TestCase):
     def test_nothing(self):
         """Pass Nothing
         Pass one element
+        Pass max in middle
         """
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer([5]), 5)
+        self.assertEqual(max_integer([11, 32, 43, 84, 15, 56, 67]), 84)
 
     def test_negative(self):
         """Pass negative numbers
