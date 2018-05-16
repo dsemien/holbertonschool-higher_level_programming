@@ -18,6 +18,7 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError('{:s} must be greater than 0'.format(name))
 
+
 class Rectangle(BaseGeometry):
     """A Rectangle subclass of superclass BaseGeometry
     """
@@ -44,6 +45,7 @@ class Rectangle(BaseGeometry):
         """
         return('[Rectangle] {:d}/{:d}'.format(self.__width, self.__height))
 
+
 class Square(Rectangle):
     """A classy Square
     """
@@ -56,4 +58,3 @@ class Square(Rectangle):
         super().integer_validator('size', size)
         self.__size = size
         super().__init__(self.__size, self.__size)
-        
