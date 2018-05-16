@@ -29,6 +29,11 @@ pass just 'name'
     Traceback (most recent call last):
     TypeError: integer_validator() missing 1 required positional argument: 'value'
 
+    >>> test.integer_validator('variable', None)
+    Traceback (most recent call last):
+    TypeError: variable must be an integer
+
+
 ==================
 pass just 'value'
 ==================
@@ -44,6 +49,24 @@ pass wrong type
     TypeError: integer_validator() missing 1 required positional argument: 'value'
 
     >>> test.integer_validator('variable', False)
+    Traceback (most recent call last):
+    TypeError: variable must be an integer
+
+    >>> test.integer_validator(area())
+    Traceback (most recent call last):
+    NameError: name 'area' is not defined
+
+    >>> test.integer_validator('variable', 1)
+
+    >>> test.integer_validator('variable', (1,))
+    Traceback (most recent call last):
+    TypeError: variable must be an integer
+
+    >>> test.integer_validator('variable', [1])
+    Traceback (most recent call last):
+    TypeError: variable must be an integer
+
+    >>> test.integer_validator('variable', {2, 6})
     Traceback (most recent call last):
     TypeError: variable must be an integer
 
