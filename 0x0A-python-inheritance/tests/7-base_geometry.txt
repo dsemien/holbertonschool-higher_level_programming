@@ -1,0 +1,63 @@
+The ``base_geometry`` module
+======================
+
+Using ``base_geometry``
+-------------------
+
+First import ``base_geometry`` from the ``7-base_geometry`` module:
+
+    >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+    >>> test = BaseGeometry()
+
+Now use it:
+==================
+control
+==================
+    >>> test.integer_validator('variable', 100)
+
+==================
+pass no arg
+==================
+    >>> test.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+==================
+pass just 'name'
+==================
+    >>> test.integer_validator('variable')
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+==================
+pass just 'value'
+==================
+    >>> test.integer_validator(100)
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+==================
+pass wrong type
+==================
+    >>> test.integer_validator([23, 'hi'])
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> test.integer_validator('variable', False)
+    Traceback (most recent call last):
+    TypeError: variable must be an integer
+
+==================
+pass negative/zero
+==================
+    >>> test.integer_validator('variable', -1)
+    Traceback (most recent call last):
+    ValueError: variable must be greater than 0
+
+    >>> test.integer_validator('variable', 0)
+    Traceback (most recent call last):
+    ValueError: variable must be greater than 0
+
+
+
+
