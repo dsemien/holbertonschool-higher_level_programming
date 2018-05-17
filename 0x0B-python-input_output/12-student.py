@@ -18,10 +18,10 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """ A JSON methon that retrieves a
+        """ A JSON method that retrieves a
             dictionary representation of a Student instance
-        Arguments (str):
-            string of attributes
+        Arguments:
+            attrs (str): string of attributes
         Returns:
             a dictionary representation of a Student instance
         """
@@ -32,3 +32,4 @@ class Student:
             if key in attrs:
                 dictionary[key] = value
         return dictionary
+
