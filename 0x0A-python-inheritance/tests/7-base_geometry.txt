@@ -70,6 +70,10 @@ pass wrong type
     Traceback (most recent call last):
     TypeError: variable must be an integer
 
+    >>> test.integer_validator('variable', '4')
+    Traceback (most recent call last):
+    TypeError: variable must be an integer
+
 ==================
 pass negative/zero
 ==================
