@@ -52,7 +52,7 @@ pass wrong type
     Traceback (most recent call last):
     TypeError: variable must be an integer
 
-    >>> test.integer_validator(area())
+    >>> print(test.area())
     Traceback (most recent call last):
     NameError: name 'area' is not defined
 
