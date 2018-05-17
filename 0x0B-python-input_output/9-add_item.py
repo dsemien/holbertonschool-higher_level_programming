@@ -9,7 +9,7 @@ add = 'add_item.json'
 argv = sys.argv[1:]
 
 try:
-    load_from_json_file(add_item)
+    f = load_from_json_file(add)
     save_to_json_file(f + argv, add)
 except Exception:
     save_to_json_file(argv, add)
