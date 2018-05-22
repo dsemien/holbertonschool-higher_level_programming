@@ -1,5 +1,6 @@
 #!usr/bin/python3
-""" Base class"""
+"""Base class
+"""
 import json
 
 
