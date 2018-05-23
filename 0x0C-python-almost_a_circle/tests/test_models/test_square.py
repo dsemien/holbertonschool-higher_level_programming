@@ -2,11 +2,15 @@
 '''
 Defines unittest for Square class
 '''
-import unittest, sys, os, pep8
+import unittest
+import sys
+import os
+import pep8
 from io import StringIO
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
+
 
 class TestSquareClass(unittest.TestCase):
     '''Testing Square class'''
@@ -103,7 +107,7 @@ class TestSquareClass(unittest.TestCase):
         self.assertRaises(TypeError, self.s2.update, 10, [], 3)
 
     def test_square_to_dictionary(self):
-        self.assertDictEqual(self.s3.to_dictionary(),{'size': 3, 'x': 1, 'y': 3, 'id': 3} )
+        self.assertDictEqual(self.s3.to_dictionary(), {'size': 3, 'x': 1, 'y': 3, 'id': 3})
 
     def test_square_dictionary_to_json(self):
         dictionary = self.s3.to_dictionary()
