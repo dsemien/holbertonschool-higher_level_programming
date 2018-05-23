@@ -2,10 +2,9 @@
 import unittest
 import sys
 import pep8
-import io
 from models.rectangle import Rectangle
 from models.base import Base
-
+from io import StringIO
 
 class TestRectangle(unittest.TestCase):
 
