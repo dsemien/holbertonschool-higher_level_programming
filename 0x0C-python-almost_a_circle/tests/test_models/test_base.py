@@ -1,9 +1,14 @@
 #!/usr/bin/python3
 """ Unittest for Base Class"""
-import unittest, json, sys, os, pep8
+import unittest
+import json
+import sys
+import os
+import pep8
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
+
 
 class TestBaseClass(unittest.TestCase):
     """A test cases for Base Class"""
@@ -27,7 +32,7 @@ class TestBaseClass(unittest.TestCase):
         del cls.b2
         del cls.b3
         del cls.b4
-    
+
     def test_control(self):
         """ Testing the standard id output"""
         testid_0 = Base(42)
