@@ -60,9 +60,9 @@ class Square(Rectangle):
             kwargs (dict): sends a keyworded variable
             length argument to the function
         """
-        arg_list = ['id', 'size', 'height', 'x', 'y']
+        arg_list = ['id', 'size', 'x', 'y']
         if kwargs is not None:
             for key, value in kwargs.items():
                 setattr(self, key, value)
         for index, argument in enumerate(args):
-            setattr(self, arg_list[index], argument)
+                setattr(self, arg_list[index], argument)
