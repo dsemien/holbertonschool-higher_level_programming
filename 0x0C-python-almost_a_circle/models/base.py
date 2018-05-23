@@ -70,7 +70,7 @@ class Base:
         Returns:
             an instance with all attributes already set
         """
-        dummyclass = cls(3, 6, 8)
+        dummyclass = cls(3, 6, 8, 9)
         dummyclass.update(**dictionary)
         return dummyclass
 
