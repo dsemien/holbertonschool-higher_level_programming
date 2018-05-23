@@ -34,3 +34,7 @@ class TestBaseClass(unittest.TestCase):
         self.assertEqual(type(test_type0.id), int)
         with self.assertRaises(AssertionError):
             self.assertEqual(type(test_type1.id), int)
+
+
+if __name__ == '__main__':
+    unittest.main()
