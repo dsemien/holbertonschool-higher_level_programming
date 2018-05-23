@@ -41,8 +41,11 @@ class Base:
             list_objs (list): a list
         """
         with open("{:s}.json".format(cls.__name__), mode='w') as f:
-            f.write(cls.to_json_string([cls.to_dictionary(item)
-                    for item in list_objs]))
+            if list_objs is None:
+                f.write('[]')
+            else:
+                f.write(cls.to_json_string([cls.to_dictionary(item)
+                        for item in list_objs]))
 
     @staticmethod
     def from_json_string(json_string):
