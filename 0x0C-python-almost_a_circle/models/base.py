@@ -84,9 +84,12 @@ class Base:
         Returns:
             a list of instances
         """
-        with open("{:s}.json".format(cls.__name__)) as f:
-            loadjson = cls.from_json_string(f.read())
+        try:
+            with open("{:s}.json".format(cls.__name__)) as f:
+                loadjson = cls.from_json_string(f.read())
             instance = []
             for argument in loadjson:
                 instance.append(cls.create(**argument))
             return instance
+        except OSError:
+            return []
