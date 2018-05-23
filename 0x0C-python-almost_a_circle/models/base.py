@@ -70,8 +70,12 @@ class Base:
         Returns:
             an instance with all attributes already set
         """
-        dummyclass = cls(3, 9)
-        dummyclass.update(**dictionary)
+        if cls.__name__ is 'Rectangle':
+            dummyclass = cls(3, 9)
+            dummyclass.update(**dictionary)
+        else:
+            dummyclass = cls(3)
+            dummyclass.update(**dictionary)
         return dummyclass
 
     @classmethod
