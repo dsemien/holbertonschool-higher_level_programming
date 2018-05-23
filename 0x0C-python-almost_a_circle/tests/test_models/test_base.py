@@ -6,7 +6,7 @@ from models.base import Base
 
 class TestBaseClass(unittest.TestCase):
     """A test cases for Base Class"""
-    
+
     def test_control(self):
         """ Testing the standard id output"""
         testid_0 = Base(42)
@@ -26,7 +26,7 @@ class TestBaseClass(unittest.TestCase):
             self.assertEqual(test_noarg0.id, None)
         with self.assertRaises(TypeError):
             self.assertEqual(test_noarg1.id,)
-  
+
     def test_type(self):
         """ Testing Type is int"""
         test_type0 = Base(42)
@@ -34,4 +34,3 @@ class TestBaseClass(unittest.TestCase):
         self.assertEqual(type(test_type0.id), int)
         with self.assertRaises(AssertionError):
             self.assertEqual(type(test_type1.id), int)
-
