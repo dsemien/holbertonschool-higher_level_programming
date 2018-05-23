@@ -148,5 +148,5 @@ class Rectangle(Base):
         if kwargs is not None:
             for key, value in kwargs.items():
                 setattr(self, key, value)
-        for index, argument in enumerate(args):
-            setattr(self, arg_list[index], argument)
+        for name, value in zip(arg_list, args):
+            setattr(self, name, value)
